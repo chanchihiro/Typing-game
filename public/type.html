@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/type.js"></script>
+	<title>タイピングゲーム</title>
+</head>
+<body>
+	<div id="container">
+	<div id="main">
+		<div id="readyPage">
+			<p class="txt1">日本語入力をオフにしてください</p>
+			<p class="txt2">一度画面をクリックしてください</p>
+			<p class="txt3">準備ができたら<br />【 F 】<br /> キーを押してください</p>
+			<p class="txt4">お題は過去１０年間の流行語です</p>
+		</div>
+		<div id="stagePage">
+			<div id="comment"></div>
+			<div id="question"></div>
+			<div id="guide"></div>
+			<div id="input"></div>
+			<div id="status">
+				<div class="timer"></div>
+				<div class="right"></div>
+				<div class="wrong"></div>
+			</div>
+		</div>
+		<div id="closePage">
+			<div class="message">おつかれさまでした</div>
+			<div class="right"></div>
+			<div class="wrong"></div>
+			<div class="retry">RETRY</div>
+			<div class="level"><div>レベル<span></span></div></div>
+		</div>
+	</div>
+	<table id="keybord">
+		<tr class="dummy">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="key key49">1<span>!</span></td>
+			<td colspan="2" class="key key50">2<span>"</span></td>
+			<td colspan="2" class="key key51">3<span>#</span></td>
+			<td colspan="2" class="key key52">4<span>$</span></td>
+			<td colspan="2" class="key key53">5<span>%</span></td>
+			<td colspan="2" class="key key54">6<span>&amp;</span></td>
+			<td colspan="2" class="key key55">7<span>'</span></td>
+			<td colspan="2" class="key key56">8<span>(</span></td>
+			<td colspan="2" class="key key57">9<span>)</span></td>
+			<td colspan="2" class="key key48">0</td>
+			<td colspan="2" class="key key189 key109">-<span>=</span></td>
+			<td colspan="2" class="key key222">^<span>～</span></td>
+			<td colspan="2" class="key key220">\<span>|</span></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td colspan="2" class="key key81">Q</td>
+			<td colspan="2" class="key key87">W</td>
+			<td colspan="2" class="key key69">E</td>
+			<td colspan="2" class="key key82">R</td>
+			<td colspan="2" class="key key84">T</td>
+			<td colspan="2" class="key key89">Y</td>
+			<td colspan="2" class="key key85">U</td>
+			<td colspan="2" class="key key73">I</td>
+			<td colspan="2" class="key key79">O</td>
+			<td colspan="2" class="key key80">P</td>
+			<td colspan="2" class="key key192">@<span>`</span></td>
+			<td colspan="2" class="key key219">[<span>{</span></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="2"></td>
+			<td colspan="2" class="key key65">A</td>
+			<td colspan="2" class="key key83">S</td>
+			<td colspan="2" class="key key68">D</td>
+			<td colspan="2" class="key key70">F</td>
+			<td colspan="2" class="key key71">G</td>
+			<td colspan="2" class="key key72">H</td>
+			<td colspan="2" class="key key74">J</td>
+			<td colspan="2" class="key key75">K</td>
+			<td colspan="2" class="key key76">L</td>
+			<td colspan="2" class="key key187 key107">;<span>+</span></td>
+			<td colspan="2" class="key key186 key59">:<span>*</span></td>
+			<td colspan="2" class="key key221">]<span>}</span></td>
+		</tr>
+		<tr>
+			<td colspan="3" class="key shift">Shift</td>
+			<td colspan="2" class="key key90">Z</td>
+			<td colspan="2" class="key key88">X</td>
+			<td colspan="2" class="key key67">C</td>
+			<td colspan="2" class="key key86">V</td>
+			<td colspan="2" class="key key66">B</td>
+			<td colspan="2" class="key key78">N</td>
+			<td colspan="2" class="key key77">M</td>
+			<td colspan="2" class="key key188">,<span>&gt;</span></td>
+			<td colspan="2" class="key key190">.<span>&lt;</span></td>
+			<td colspan="2" class="key key key191">/<span>?</span></td>
+			<td colspan="2" class="key key226">\<span>_</span></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td colspan="10" class="key key32">Space</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>

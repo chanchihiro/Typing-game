@@ -1,0 +1,6 @@
+/node_modules
+/guide
+.eslintrc
+npm-debug.log
+.DS_Store
+/design

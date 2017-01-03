@@ -1,0 +1,39 @@
+@charset 'utf-8';
+
+////////// 指定する色
+$white: #fff;
+$black: #000;
+
+////////// SNS
+$twitter: #34a1c8 !important;
+$facebook: #235a99 !important;
+$instagram: #2a5b83 !important;
+$nicovideo: #efb10a !important;
+
+////////// フォント light
+@font-face{
+	font-family: mc-l;
+	src:url(../font/mplus-1m-light.ttf)format("opentype");
+}
+////////// フォント bold
+@font-face{
+	font-family: mc-b;
+	src:url(../font/mplus-1m-bold.ttf)format("opentype");
+}////////// フォント regular
+@font-face{
+	font-family: mc-r;
+	src:url(../font/mplus-1m-regular.ttf)format("opentype");
+}
+////////// フォント thin
+@font-face{
+	font-family: mc-t;
+	src:url(../font/mplus-1m-thin)format("opentype");
+}
+////////// フォント light
+@font-face{
+	font-family: mc-m;
+	src:url(../font/mplus-1m-medium.ttf)format("opentype");
+}
+
+/////// Typography
+// Font-size
