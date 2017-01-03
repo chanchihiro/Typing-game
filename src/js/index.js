@@ -1,11 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import jquery from 'jquery'
+
+
 
 
 
 
 ReactDOM.render(
-	<Todo />,
-	document.getElementById("content")
+	<Typing />,
+	document.getElementById("typeDOM")
 );

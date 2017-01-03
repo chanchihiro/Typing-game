@@ -21,7 +21,7 @@ var Typing =
 		Typing.retryButton = jQuery(".retry");
 		Typing.rightPoint = 1;
 		Typing.wrongPoint = 3;
-		Typing.startKey = "F";
+		Typing.startKey = "f";
 		
 		Typing.ready();
 	}
