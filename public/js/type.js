@@ -22,7 +22,7 @@ var Typing =
 		Typing.rightPoint = 1;
 		Typing.wrongPoint = 3;
 		Typing.startKey = "F";
-		
+
 		Typing.ready();
 	}
 }
@@ -33,14 +33,14 @@ Typing.ready = function()
 	Typing.rightCount = 0;
 	Typing.wrongCount = 0;
 	Typing.datasIndex = [];
-	
+
 	for(var i = 0; i < Typing.datas.length; i++) Typing.datasIndex[i] = i;
-	
+
 	Typing.stagePage.hide();
 	Typing.closePage.hide();
 	Typing.right();
 	Typing.wrong();
-	
+
 	Typing.readyPage.fadeIn();
 	Typing.activeKeybord(Typing.startKey);
 	Typing.setTypingHandler(Typing.readyHandler);
@@ -74,7 +74,7 @@ Typing.timerHandler = function()
 	var s = Typing.second % 60;
 	if(m < 10) m = "0" + m;
 	if(s < 10) s = "0" + s;
-	
+
 	Typing.timerArea.text(m + ":" + s);
 	Typing.second--;
 }
@@ -82,16 +82,16 @@ Typing.timerHandler = function()
 Typing.chooseQuestion = function()
 {
 	var i = Math.floor(Math.random() * Typing.datasIndex.length);
-	
+
 	Typing.data = Typing.datas[Typing.datasIndex[i]];
-	
+
 	if(Typing.datasIndex.length > 5)
 	{
 		Typing.datasIndex.splice(i, 1);
 	}
 	Typing.input = "";
 	Typing.characters = Typing.kanaToChar(Typing.data.kana);
-	
+
 	Typing.displayQuestion();
 	Typing.dsiplayComment();
 	Typing.displayCharacters();
@@ -102,11 +102,11 @@ Typing.chooseQuestion = function()
 Typing.typing = function(e)
 {
 	var chr = Typing.codeToChar(e.keyCode, e.shiftKey);
-	
+
 	if(chr)
 	{
 		var jadge = Typing.jadge(chr);
-		
+
 		if(jadge !== false)
 		{
 			if(jadge)
@@ -136,13 +136,13 @@ Typing.jadge = function(chr)
 		if(Typing.characters[0][i].substr(0, 1) == chr)
 		{
 			Typing.input += chr;
-			
+
 			for(var i = 0; i < Typing.characters[0].length; i++)
 			{
 				if(Typing.characters[0][i].substr(0, 1) == chr)
 				{
 					Typing.characters[0][i] = Typing.characters[0][i].substr(1);
-					
+
 					if(Typing.characters[0][i].length == 0)
 					{
 						Typing.characters.shift();
@@ -162,11 +162,11 @@ Typing.jadge = function(chr)
 }
 
 Typing.close = function()
-{ 
+{
 	Typing.setTypingHandler();
 	Typing.activeKeybord(false);
 	Typing.closePage.fadeIn(1000);
-	
+
 	Typing.closePage.find(".right").hide()
 	                               .delay(1500)
 	                               .fadeIn(500);
@@ -200,7 +200,7 @@ Typing.mark = function()
 	var wrongPoint = Typing.wrongCount * Typing.wrongPoint;
 	var point = rightPoint - wrongPoint;
 	var level = "E";
-	
+
 	if      (point <  25) level = "E";
 	else if (point <  50) level = "E+";
 	else if (point <  75) level = "D-";
@@ -216,14 +216,14 @@ Typing.mark = function()
 	else if (point < 325) level = "A";
 	else if (point < 350) level = "A+";
 	else level = "S";
-	
+
 	return level;
 }
 
 Typing.kanaToChar = function(str)
 {
 	var characters = [];
-	
+
 	for(var i = 0; i < str.length; i++)
 	{
 		var list = [];
@@ -238,12 +238,12 @@ Typing.kanaToChar = function(str)
 		var cA = s1 && s2 ? Typing.charTable[s1 + s2] : "";
 		var cB = s2 && s3 ? Typing.charTable[s2 + s3] : "";
 		var cC = s3 && s4 ? Typing.charTable[s3 + s4] : "";
-		
+
 		if(cA)
 		{
 			for(var iA in cA) list.push(cA[iA]);
 			for(var i1 in c1) for(var i2 in c2) list.push(c1[i1] + c2[i2])
-			
+
 			i = i + 1;
 		}
 		else if(s1 == "ン")
@@ -260,7 +260,7 @@ Typing.kanaToChar = function(str)
 					list.push("NLTU");
 					list.push("NXTSU");
 					list.push("NLTSU");
-					
+
 					i = i + 1;
 				}
 				else　if(cC)
@@ -425,11 +425,11 @@ Typing.displayCharacters = function()
 	var input = Typing.input;
 	if(input.length > 5)
 	input = input.substr(input.length - 5);
-	
+
 	var guide = input;
 	for (var i in Typing.characters)
 	guide += Typing.characters[i][0];
-	
+
 	Typing.inputArea.text(input);
 	Typing.guideArea.text(guide);
 }
@@ -442,14 +442,14 @@ Typing.dsiplayComment = function()
 Typing.activeKeybord = function(nextChar)
 {
 	Typing.keybords.removeClass("active");
-	
+
 	if(nextChar !== false)
 	{
 		if(!nextChar)
 		nextChar = Typing.guideArea.text().substr(Typing.inputArea.text().length, 1);
-		
+
 		var nextCode = Typing.charToCode(nextChar);
-		
+
 		if(nextCode.shift)
 		jQuery(".shift", Typing.keybordes).addClass("active");
 		jQuery(".key" + nextCode.code, Typing.keybordes).addClass("active");
@@ -504,7 +504,7 @@ Typing.codeTable = {
 	190 : [ "." , ">" ],
 	191 : [ "/" , "?" ],
 	192 : [ "@" , "`" ],
-	219 : [ "[" , "{" ], 
+	219 : [ "[" , "{" ],
 	220 : [ "\\", "|" ],
 	221 : [ "]" , "}" ],
 	222 : [ "^" , "~" ],
@@ -693,7 +693,7 @@ Typing.charTable = {
 	"リュ"	: ["RYU"],
 	"リェ"	: ["RYE"],
 	"リョ"		: ["RYO"],
-	"ギャ"	: ["GYA"], 
+	"ギャ"	: ["GYA"],
 	"ギィ"	: ["GYI"],
 	"ギュ"	: ["GYU"],
 	"ギェ"	: ["GYE"],
@@ -776,5 +776,20 @@ Typing.datas = [
 		question : "インプットインプットインプット",
 		kana : "インプットインプットインプット",
 		comment : "ちゃんちー"
+	},
+	{
+		question : "フル単！！単位落とさない",
+		kana : "フルタン！！タンイオトサナイ",
+		comment : "しのきん"
+	},
+	{
+		question : "好きなひとつくる",
+		kana : "スキナヒトツクル",
+		comment : "しのきん"
+	},
+	{
+		question: "浪費しない",
+		kana : "ロウヒシナイ",
+		comment : "しのきん"
 	}
 ];
