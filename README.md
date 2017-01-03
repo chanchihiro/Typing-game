@@ -85,6 +85,8 @@ GitHubのページからプルリクを作成します。`New pull request`を�
 ![New pull request選択画面](./Readme_images/screenshot_newpullrequest.png)
 
 10.プルリクエストの際にフォーク元のリポジトリと自身のリポジトリを選択して、`New pull request`を選択します。
+![Compare画面](./Readme_images/screenshot_compare.png)
 
-11.タイトルと説明を適宜追加し、`Create pull request`を選択します。
+11.タイトルと適宜説明を追加し、`Create pull request`を選択します。
+![Open pull request画面](./Readme_images/screenshot_openpullrequest.png)
 以上で、あとはマージされるのを待つだけです。😄
