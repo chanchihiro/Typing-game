@@ -846,5 +846,20 @@ Typing.datas = [
 		question: "みくりさんを幸せにする",
 		kana : "ミクリサンヲシアワセ二スル",
 		comment : "津崎平匡"
+	},
+	{
+		qusetion : "趣味を見つける",
+		kana : "シュミヲミツケル",
+		comment : "フンジン"
+	},
+	{
+		qusetion : "金を稼ぐきっかけを作る",
+		kana : "カネヲカセグキッカケヲツクル",
+		comment : "フンジン"
+	},
+	{
+		qusetion : "vimを極める",
+		kana : "ビムヲキワメル",
+		comment : "フンジン"
 	}
 ];
