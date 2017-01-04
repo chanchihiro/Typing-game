@@ -791,5 +791,10 @@ Typing.datas = [
 		question: "浪費しない",
 		kana : "ロウヒシナイ",
 		comment : "しのきん"
+	},
+	{
+		question: "彼女ほしい、永遠の願い",
+		kana : "カノジョホシイ、エイエンノネガイ",
+		comment : "とうよう"
 	}
 ];
