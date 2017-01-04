@@ -793,6 +793,21 @@ Typing.datas = [
 		comment : "しのきん"
 	},
 	{
+		question: "アウトプットしてきちんと何か作る",
+		kana : "アウトプットシテキチントナニカツクル",
+		comment : "れもん"
+	},
+	{
+		question: "金を稼ぐ",
+		kana : "カネヲカセグ",
+		comment : "れもん"
+	},
+	{
+		question: "たくさん寝る",
+		kana : "タクサンネル",
+		comment : "れもん"
+  },
+  {
 		question: "僕のみくりさんをみつける",
 		kana : "ボクノミクリサンヲミツケル",
 		comment : "とうよう"
