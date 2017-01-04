@@ -1,31 +1,31 @@
 jQuery(function()
-{
-	Typing.init();
-});
+	{
+		Typing.init();
+	});
 
 var Typing =
-{
-	init : function()
 	{
-		Typing.readyPage = jQuery("#readyPage");
-		Typing.stagePage = jQuery("#stagePage");
-		Typing.closePage = jQuery("#closePage");
-		Typing.questionArea = jQuery("#question");
-		Typing.commentArea = jQuery("#comment");
-		Typing.inputArea = jQuery("#input");
-		Typing.guideArea = jQuery("#guide");
-		Typing.keybords = jQuery("#keybord .key");
-		Typing.timerArea = jQuery(".timer");
-		Typing.rightArea = jQuery(".right");
-		Typing.wrongArea = jQuery(".wrong");
-		Typing.retryButton = jQuery(".retry");
-		Typing.rightPoint = 1;
-		Typing.wrongPoint = 3;
-		Typing.startKey = "F";
+		init : function()
+		{
+			Typing.readyPage = jQuery("#readyPage");
+			Typing.stagePage = jQuery("#stagePage");
+			Typing.closePage = jQuery("#closePage");
+			Typing.questionArea = jQuery("#question");
+			Typing.commentArea = jQuery("#comment");
+			Typing.inputArea = jQuery("#input");
+			Typing.guideArea = jQuery("#guide");
+			Typing.keybords = jQuery("#keybord .key");
+			Typing.timerArea = jQuery(".timer");
+			Typing.rightArea = jQuery(".right");
+			Typing.wrongArea = jQuery(".wrong");
+			Typing.retryButton = jQuery(".retry");
+			Typing.rightPoint = 1;
+			Typing.wrongPoint = 3;
+			Typing.startKey = "F";
 
-		Typing.ready();
+			Typing.ready();
+		}
 	}
-}
 
 Typing.ready = function()
 {
@@ -168,20 +168,20 @@ Typing.close = function()
 	Typing.closePage.fadeIn(1000);
 
 	Typing.closePage.find(".right").hide()
-	                               .delay(1500)
-	                               .fadeIn(500);
+		.delay(1500)
+		.fadeIn(500);
 	Typing.closePage.find(".wrong").hide()
-	                               .delay(2500)
-	                               .fadeIn(500);
+		.delay(2500)
+		.fadeIn(500);
 	Typing.closePage.find(".retry").hide()
-	                               .delay(3500)
-	                               .fadeIn(500)
-	                               .unbind("retry")
-	                               .click(Typing.ready);
+		.delay(3500)
+		.fadeIn(500)
+		.unbind("retry")
+		.click(Typing.ready);
 	Typing.closePage.find(".level").hide()
-	                               .delay(3500)
-	                               .fadeIn(500)
-	                               .find("span").text(Typing.mark());
+		.delay(3500)
+		.fadeIn(500)
+		.find("span").text(Typing.mark());
 }
 
 Typing.right = function()
@@ -424,11 +424,11 @@ Typing.displayCharacters = function()
 {
 	var input = Typing.input;
 	if(input.length > 5)
-	input = input.substr(input.length - 5);
+		input = input.substr(input.length - 5);
 
 	var guide = input;
 	for (var i in Typing.characters)
-	guide += Typing.characters[i][0];
+		guide += Typing.characters[i][0];
 
 	Typing.inputArea.text(input);
 	Typing.guideArea.text(guide);
@@ -446,55 +446,55 @@ Typing.activeKeybord = function(nextChar)
 	if(nextChar !== false)
 	{
 		if(!nextChar)
-		nextChar = Typing.guideArea.text().substr(Typing.inputArea.text().length, 1);
+			nextChar = Typing.guideArea.text().substr(Typing.inputArea.text().length, 1);
 
 		var nextCode = Typing.charToCode(nextChar);
 
 		if(nextCode.shift)
-		jQuery(".shift", Typing.keybordes).addClass("active");
+			jQuery(".shift", Typing.keybordes).addClass("active");
 		jQuery(".key" + nextCode.code, Typing.keybordes).addClass("active");
 	}
 }
 
 Typing.codeTable = {
-	 32 : [ " " , " " ],
-	 48 : [ "0" , ""  ],
-	 49 : [ "1" , "!" ],
-	 50 : [ "2" , '"' ],
-	 51 : [ "3" , "#" ],
-	 52 : [ "4" , "$" ],
-	 53 : [ "5" , "%" ],
-	 54 : [ "6" , "&" ],
-	 55 : [ "7" , "'" ],
-	 56 : [ "8" , "(" ],
-	 57 : [ "9" , ")" ],
-	 59 : [ ":" , "+" ], // ブラウザ差異あり
-	 65 : [ "A" , "A" ],
-	 66 : [ "B" , "B" ],
-	 67 : [ "C" , "C" ],
-	 68 : [ "D" , "D" ],
-	 69 : [ "E" , "E" ],
-	 70 : [ "F" , "F" ],
-	 71 : [ "G" , "G" ],
-	 72 : [ "H" , "H" ],
-	 73 : [ "I" , "I" ],
-	 74 : [ "J" , "J" ],
-	 75 : [ "K" , "K" ],
-	 76 : [ "L" , "L" ],
-	 77 : [ "M" , "M" ],
-	 78 : [ "N" , "N" ],
-	 79 : [ "O" , "O" ],
-	 80 : [ "P" , "P" ],
-	 81 : [ "Q" , "Q" ],
-	 82 : [ "R" , "R" ],
-	 83 : [ "S" , "S" ],
-	 84 : [ "T" , "I" ],
-	 85 : [ "U" , "U" ],
-	 86 : [ "V" , "V" ],
-	 87 : [ "W" , "W" ],
-	 88 : [ "X" , "X" ],
-	 89 : [ "Y" , "Y" ],
-	 90 : [ "Z" , "Z" ],
+	32 : [ " " , " " ],
+	48 : [ "0" , ""  ],
+	49 : [ "1" , "!" ],
+	50 : [ "2" , '"' ],
+	51 : [ "3" , "#" ],
+	52 : [ "4" , "$" ],
+	53 : [ "5" , "%" ],
+	54 : [ "6" , "&" ],
+	55 : [ "7" , "'" ],
+	56 : [ "8" , "(" ],
+	57 : [ "9" , ")" ],
+	59 : [ ":" , "+" ], // ブラウザ差異あり
+	65 : [ "A" , "A" ],
+	66 : [ "B" , "B" ],
+	67 : [ "C" , "C" ],
+	68 : [ "D" , "D" ],
+	69 : [ "E" , "E" ],
+	70 : [ "F" , "F" ],
+	71 : [ "G" , "G" ],
+	72 : [ "H" , "H" ],
+	73 : [ "I" , "I" ],
+	74 : [ "J" , "J" ],
+	75 : [ "K" , "K" ],
+	76 : [ "L" , "L" ],
+	77 : [ "M" , "M" ],
+	78 : [ "N" , "N" ],
+	79 : [ "O" , "O" ],
+	80 : [ "P" , "P" ],
+	81 : [ "Q" , "Q" ],
+	82 : [ "R" , "R" ],
+	83 : [ "S" , "S" ],
+	84 : [ "T" , "I" ],
+	85 : [ "U" , "U" ],
+	86 : [ "V" , "V" ],
+	87 : [ "W" , "W" ],
+	88 : [ "X" , "X" ],
+	89 : [ "Y" , "Y" ],
+	90 : [ "Z" , "Z" ],
 	107 : [ ";" , "+" ], // ブラウザ差異あり
 	109 : [ "-" , "=" ], // ブラウザ差異あり
 	186 : [ ":" , "*" ], // ブラウザ差異あり
@@ -592,7 +592,7 @@ Typing.charTable = {
 	"ロ"		: ["RO"],
 	"ワ"		: ["WA"],
 	"ヲ"		: ["WO"],
-//	"ン"		: ["NN"],
+	//	"ン"		: ["NN"],
 	"ガ"		: ["GA"],
 	"ギ"		: ["GI"],
 	"グ"		: ["GU"],
@@ -627,7 +627,7 @@ Typing.charTable = {
 	"ュ"		: ["XYU", "LYU"],
 	"ョ"		: ["XYO", "LYO"],
 	"ヶ"		: ["XKE", "LKE"],
-//	"ッ"		: ["XTU", "LTU", "XTSU", "LTSU"],
+	//	"ッ"		: ["XTU", "LTU", "XTSU", "LTSU"],
 	"ウィ"	: ["WI"],
 	"ウェ"	: ["WE"],
 	"キャ"	: ["KYA"],
@@ -806,8 +806,8 @@ Typing.datas = [
 		question: "明るい表情を心がける",
 		kana : "アカルイヒョウジョウヲココロガケル",
 		comment : "みーたん"
-  },
-  {
+	},
+	{
 		question : "綺麗な部屋を維持する",
 		kana : "キレイナヘヤヲイジスル",
 		comment : "バッハ"
@@ -821,8 +821,8 @@ Typing.datas = [
 		question : "料理スキルを磨く",
 		kana : "リョウリスキルヲミガク",
 		comment : "バッハ"
-  },
-  {
+	},
+	{
 		question: "アウトプットしてきちんと何か作る",
 		kana : "アウトプットシテキチントナニカツクル",
 		comment : "れもん"
@@ -836,8 +836,8 @@ Typing.datas = [
 		question: "たくさん寝る",
 		kana : "タクサンネル",
 		comment : "れもん"
-  },
-  {
+	},
+	{
 		question: "僕のみくりさんをみつける",
 		kana : "ボクノミクリサンヲミツケル",
 		comment : "とうよう"
@@ -846,5 +846,20 @@ Typing.datas = [
 		question: "みくりさんを幸せにする",
 		kana : "ミクリサンヲシアワセ二スル",
 		comment : "津崎平匡"
+	},
+	{
+		qusetion : "趣味を見つける",
+		kana : "シュミヲミツケル",
+		comment : "フンジン"
+	},
+	{
+		qusetion : "金を稼ぐきっかけを作る",
+		kana : "カネヲカセグキッカケヲツクル",
+		comment : "フンジン"
+	},
+	{
+		qusetion : "vimを極める",
+		kana : "ビムヲキワメル",
+		comment : "フンジン"
 	}
 ];
