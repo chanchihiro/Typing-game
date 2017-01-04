@@ -806,5 +806,45 @@ Typing.datas = [
 		question: "明るい表情を心がける",
 		kana : "アカルイヒョウジョウヲココロガケル",
 		comment : "みーたん"
+  },
+  {
+		question : "綺麗な部屋を維持する",
+		kana : "キレイナヘヤヲイジスル",
+		comment : "バッハ"
+	},
+	{
+		question : "綺麗なコードを書くようにする",
+		kana : "キレイナコードヲカクヨウニスル",
+		comment : "バッハ"
+	},
+	{
+		question : "料理スキルを磨く",
+		kana : "リョウリスキルヲミガク",
+		comment : "バッハ"
+  },
+  {
+		question: "アウトプットしてきちんと何か作る",
+		kana : "アウトプットシテキチントナニカツクル",
+		comment : "れもん"
+	},
+	{
+		question: "金を稼ぐ",
+		kana : "カネヲカセグ",
+		comment : "れもん"
+	},
+	{
+		question: "たくさん寝る",
+		kana : "タクサンネル",
+		comment : "れもん"
+  },
+  {
+		question: "僕のみくりさんをみつける",
+		kana : "ボクノミクリサンヲミツケル",
+		comment : "とうよう"
+	},
+	{
+		question: "みくりさんを幸せにする",
+		kana : "ミクリサンヲシアワセ二スル",
+		comment : "津崎平匡"
 	}
 ];
