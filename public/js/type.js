@@ -793,6 +793,21 @@ Typing.datas = [
 		comment : "しのきん"
 	},
 	{
+		question: "お腹を凹ます",
+		kana : "オナカヲヘコマス",
+		comment : "みーたん"
+	},
+	{
+		question: "後回しにしない",
+		kana : "アトマワシニシナイ",
+		comment : "みーたん"
+	},
+	{
+		question: "明るい表情を心がける",
+		kana : "アカルイヒョウジョウヲココロガケル",
+		comment : "みーたん"
+  },
+  {
 		question : "綺麗な部屋を維持する",
 		kana : "キレイナヘヤヲイジスル",
 		comment : "バッハ"
