@@ -806,5 +806,15 @@ Typing.datas = [
 		question: "たくさん寝る",
 		kana : "タクサンネル",
 		comment : "れもん"
+  },
+  {
+		question: "僕のみくりさんをみつける",
+		kana : "ボクノミクリサンヲミツケル",
+		comment : "とうよう"
+	},
+	{
+		question: "みくりさんを幸せにする",
+		kana : "ミクリサンヲシアワセ二スル",
+		comment : "津崎平匡"
 	}
 ];
