@@ -791,5 +791,20 @@ Typing.datas = [
 		question: "浪費しない",
 		kana : "ロウヒシナイ",
 		comment : "しのきん"
+	},
+	{
+		question: "アウトプットしてきちんと何か作る",
+		kana : "アウトプットシテキチントナニカツクル",
+		comment : "れもん"
+	},
+	{
+		question: "金を稼ぐ",
+		kana : "カネヲカセグ",
+		comment : "れもん"
+	},
+	{
+		question: "たくさん寝る",
+		kana : "タクサンネル",
+		comment : "れもん"
 	}
 ];
