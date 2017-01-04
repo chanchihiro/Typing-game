@@ -806,5 +806,30 @@ Typing.datas = [
 		question : "料理スキルを磨く",
 		kana : "リョウリスキルヲミガク",
 		comment : "バッハ"
+  },
+  {
+		question: "アウトプットしてきちんと何か作る",
+		kana : "アウトプットシテキチントナニカツクル",
+		comment : "れもん"
+	},
+	{
+		question: "金を稼ぐ",
+		kana : "カネヲカセグ",
+		comment : "れもん"
+	},
+	{
+		question: "たくさん寝る",
+		kana : "タクサンネル",
+		comment : "れもん"
+  },
+  {
+		question: "僕のみくりさんをみつける",
+		kana : "ボクノミクリサンヲミツケル",
+		comment : "とうよう"
+	},
+	{
+		question: "みくりさんを幸せにする",
+		kana : "ミクリサンヲシアワセ二スル",
+		comment : "津崎平匡"
 	}
 ];
