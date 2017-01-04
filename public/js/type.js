@@ -793,6 +793,21 @@ Typing.datas = [
 		comment : "しのきん"
 	},
 	{
+		question : "綺麗な部屋を維持する",
+		kana : "キレイナヘヤヲイジスル",
+		comment : "バッハ"
+	},
+	{
+		question : "綺麗なコードを書くようにする",
+		kana : "キレイナコードヲカクヨウニスル",
+		comment : "バッハ"
+	},
+	{
+		question : "料理スキルを磨く",
+		kana : "リョウリスキルヲミガク",
+		comment : "バッハ"
+  },
+  {
 		question: "アウトプットしてきちんと何か作る",
 		kana : "アウトプットシテキチントナニカツクル",
 		comment : "れもん"
