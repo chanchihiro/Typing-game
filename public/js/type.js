@@ -793,8 +793,8 @@ Typing.datas = [
 		comment : "しのきん"
 	},
 	{
-		question: "彼女ほしい、永遠の願い",
-		kana : "カノジョホシイ、エイエンノネガイ",
+		question: "僕のみくりさんをみつける",
+		kana : "ボクノミクリサンヲミツケル",
 		comment : "とうよう"
 	}
 ];
