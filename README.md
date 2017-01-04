@@ -70,7 +70,7 @@ git add public/js/type.js
 
 次に、
 ```
-git commit -m"Added new json data"
+git commit -m 'Added new json data'
 ```
 
 最後に、
